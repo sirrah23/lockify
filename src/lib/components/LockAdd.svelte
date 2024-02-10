@@ -14,19 +14,23 @@
         border: 2px solid black;
         padding: 10px;
     }
+    .container {
+        padding: 10px;
+        margin: 10px;
+    }
     .textarea {
         height: 5rem;
         width: 50%;
     }
 </style>
 
-<div class="black-border">
 <h2>Add a lock</h2>
-<div>
-    <button on:click={() => generateCode()}>Generate a code</button>
-    <button on:click={() => {}}>Save</button>
-</div>
-<p>Your locker code is: {lockerCode ? lockerCode : "..."}</p>
-<p>Notes:</p>
-<textarea class="textarea"></textarea>
+<div class="black-border container">
+    <div>
+        <button on:click={() => generateCode()}>Generate a code</button>
+        <button on:click={() => {}}>Save</button>
+    </div>
+    <p>Your locker code is: {lockerCode ? lockerCode : "..."}</p>
+    <p>Notes:</p>
+    <textarea class="textarea"></textarea>
 </div>
