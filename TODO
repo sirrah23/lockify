@@ -15,6 +15,7 @@ Todo:
   ✔ Dry up CSS @done(24-02-10 23:15)
   ✔ Hide + Reveal codes @done(24-02-10 23:15)
   ✔ Lock creation happens via a modal @done(24-02-11 00:12)
+  ✔ Reveal is a button not a checkbox @done(24-02-11 00:23)
   ☐ Deploy to the web
   Bug:
     ☐ Can save to database without generating a code

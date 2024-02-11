@@ -7,17 +7,11 @@
 
 <div class="box">
 	<div class="block">
-		<p>
-			Code:
-			<Code code={lock.lock} {reveal} />
-			<label>
-				<input type="checkbox" bind:checked={reveal} />
-				Reveal
-			</label>
-		</p>
+		<p class="is-size-5">Date and time: {lock.createdAt.toLocaleString("en-US")}</p>
 	</div>
 	<div class="block">
-		<p>Created at: {lock.createdAt}</p>
+		<Code code={lock.lock} {reveal} />
+		<button class="button is-small" on:click={() => reveal = !reveal}>👁</button>
 	</div>
 	<div class="block">
 		<p>Note:</p>
