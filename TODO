@@ -1,10 +1,17 @@
 Todo:
   ✔ Generate a 4 digit code and show it on the page @done(24-02-10 17:41)
   ✔ Allow user to take notes @done(24-02-10 17:42)
-  ☐ Allow user to save entries to indexdb
+  ✔ Allow user to save entries to indexdb @done(24-02-10 19:33)
     Consider using https://dexie.org/
     ✔ Install dexie @done(24-02-10 18:09)
-    ☐ Create a new database and persist codes to it when the user clicks save
-  ☐ Separate into components:
-    ☐ LockAdd
-    ☐ LockList
+    ✔ Create a new database and persist codes to it when the user clicks save @started(24-02-10 18:51) @done(24-02-10 19:15) @lasted(24m32s)
+    ✔ Read locks from database and display them @done(24-02-10 19:33)
+  ✔ Separate into components: @done(24-02-10 18:46)
+    ✔ LockAdd @done(24-02-10 18:29)
+    ✔ LockList @done(24-02-10 19:36)
+  ☐ Add a nice transition for when items are added to lock list
+  ✔ Clear form on successful save @done(24-02-10 19:37)
+  ☐ Clean up created date/time format
+  ☐ Hide + Reveal codes
+  ☐ Dry up CSS
+  ☐ Lock creation happens via a modal
