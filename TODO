@@ -14,8 +14,8 @@ Todo:
   ✔ Create lock item component @started(24-02-10 20:40) @done(24-02-10 20:46) @lasted(6m34s)
   ✔ Dry up CSS @done(24-02-10 23:15)
   ✔ Hide + Reveal codes @done(24-02-10 23:15)
+  ✔ Lock creation happens via a modal @done(24-02-11 00:12)
   ☐ Deploy to the web
-  ☐ Lock creation happens via a modal
   Bug:
     ☐ Can save to database without generating a code
   Nice to have:
