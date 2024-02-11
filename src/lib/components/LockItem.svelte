@@ -2,12 +2,17 @@
 	import type { Lock } from '$lib/data/db';
 	import Code from './Code.svelte';
 	export let lock: Lock;
+    let reveal = false;
 </script>
 
 <div class="container black-border">
 	<p>
 		Code:
-		<Code code={lock.lock} />
+		<Code code={lock.lock} reveal={reveal} />
+        <label>
+            <input type="checkbox" bind:checked={reveal} />
+            Reveal
+        </label>
 	</p>
 	<p>Created at: {lock.createdAt}</p>
 	<p>Note:</p>

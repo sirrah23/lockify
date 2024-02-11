@@ -43,7 +43,7 @@
 	</div>
 	<p>Your locker code is:
         {#if lockerCode}
-            <Code code={lockerCode}/>
+            <Code code={lockerCode} reveal/>
         {:else}
             ...
         {/if}
