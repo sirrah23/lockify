@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { db } from '$lib/data/db';
+	import { onMount } from 'svelte';
 	import Code from './Code.svelte';
+
+	export let onDone: () => void = () => {};
 
 	let lockerCode: number[];
 	let note: string;
@@ -22,42 +25,54 @@
 				// TODO: Can indexdb generate this for me?
 				createdAt: new Date()
 			});
-			status = { message: `Persisted lock with id ${id}`, isError: false };
+			console.dir({ message: `Persisted lock with id ${id}`, isError: false });
 			// Reset the form
 			lockerCode = [];
 			note = '';
 		} catch (error) {
-			status = { message: `Failed to persist lock: ${error}`, isError: true };
+			console.dir({ message: `Failed to persist lock: ${error}`, isError: true });
+		} finally {
+			onDone();
 		}
 	}
+
+	onMount(() => {
+		generateCode();
+	});
 </script>
 
-<h2 class="title is-2">Add a lock</h2>
-<div class="box">
-	{#if status}
-		<div class="block">
-			<p class={status.isError ? 'error-message' : 'success-message'}>{status.message}</p>
-		</div>
-	{/if}
-	<div class="block">
-		<button class="button" on:click={() => generateCode()}>Generate a code</button>
-		<button class="button" on:click={() => saveLock()}>Save</button>
-	</div>
-	<div class="block">
-		<p>
-			Your locker code is:
-			{#if lockerCode}
-				<Code code={lockerCode} reveal />
-			{:else}
-				...
-			{/if}
-		</p>
-	</div>
-	<div class="block">
-		<p>Note:</p>
-	</div>
-	<div class="block">
-		<textarea class="textarea" bind:value={note}></textarea>
+<div class="modal is-active">
+	<div class="modal-background"></div>
+	<div class="modal-card">
+		<header class="modal-card-head">
+			<p class="modal-card-title">Add a lock</p>
+			<button class="delete" aria-label="close" on:click={onDone}></button>
+		</header>
+		<section class="modal-card-body">
+			<div class="block">
+				Generated code
+				<button class="button is-small" on:click={()=>generateCode()}>↺</button>
+			</div>
+			<div class="block">
+				{#if lockerCode}
+					<div>
+					<Code code={lockerCode} reveal />
+					</div>
+				{:else}
+					...
+				{/if}
+			</div>
+			<div class="block">
+				<p>Note:</p>
+			</div>
+			<div class="block">
+				<textarea class="textarea" bind:value={note}></textarea>
+			</div>
+		</section>
+		<footer class="modal-card-foot">
+			<button class="button is-info" on:click={() => saveLock()}>Save</button>
+			<button class="button" on:click={onDone}>Cancel</button>
+		</footer>
 	</div>
 </div>
 
@@ -65,11 +80,5 @@
 	.textarea {
 		height: 5rem;
 		width: 50%;
-	}
-	.error-message {
-		color: red;
-	}
-	.success-message {
-		color: green;
 	}
 </style>

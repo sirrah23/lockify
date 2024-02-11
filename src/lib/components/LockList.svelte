@@ -10,7 +10,6 @@
 </script>
 
 <div >
-    <h2 class="title is-2">Lock list</h2>
     {#if $locks}
         {#each $locks as lock (lock.id)}
             <div 
