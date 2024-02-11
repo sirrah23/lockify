@@ -7,7 +7,7 @@
 	let showLockAddModal = false;
 </script>
 
-<section class="hero is-info">
+<section class="hero is-info is-small">
 	<div class="hero-body">
 		<p class="title is-1">Lockify</p>
 		<p class="subtitle">Protect the goods</p>
