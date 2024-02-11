@@ -3,6 +3,8 @@
 Lockify is a simple web application that generates, and lets you keep track, of
 locker codes.
 
+Check it out [here](https://lockify.vercel.app/) (while supplies last).
+
 ## Background
 
 I go to the gym often  🏋️️ and mine in particular has lockers that anyone can
