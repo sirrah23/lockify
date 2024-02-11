@@ -31,6 +31,7 @@
   },
   "type": "module",
   "dependencies": {
+    "bulma": "^0.9.4",
     "dexie": "next"
   }
 }
