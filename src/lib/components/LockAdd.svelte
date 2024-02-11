@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { db } from '$lib/data/db';
+	import Code from './Code.svelte';
+
 	let lockerCode: number[];
 	let note: string;
 	let status: {message: string, isError: boolean};
@@ -10,8 +13,6 @@
 		}
 		lockerCode = [...newDigits];
 	}
-
-	import { db } from '$lib/data/db';
 
 	async function saveLock() {
 		try {
@@ -40,7 +41,13 @@
 		<button on:click={() => generateCode()}>Generate a code</button>
 		<button on:click={() => saveLock()}>Save</button>
 	</div>
-	<p>Your locker code is: {lockerCode ? lockerCode : '...'}</p>
+	<p>Your locker code is:
+        {#if lockerCode}
+            <Code code={lockerCode}/>
+        {:else}
+            ...
+        {/if}
+    </p>
 	<p>Notes:</p>
 	<textarea class="textarea" bind:value={note}></textarea>
 </div>
