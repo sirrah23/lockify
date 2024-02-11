@@ -7,6 +7,22 @@
 	let showLockAddModal = false;
 </script>
 
+<nav class="navbar">
+	<div class="container">
+		<div class="navbar-end">
+			<div class="navbar-item">
+				<div class="buttons">
+					<a href="https://github.com/sirrah23/lockify">
+						<figure class="image is-24x24 is-pulled-right">
+							<img class="is-rounded" alt="link to github" src={githubLogo} />
+						</figure>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
 <section class="hero is-info is-small">
 	<div class="hero-body">
 		<p class="title is-1">Lockify</p>
@@ -14,11 +30,6 @@
 	</div>
 </section>
 <div class="section">
-	<a href="https://github.com/sirrah23/lockify">
-		<figure class="image is-48x48 is-pulled-right ml-2">
-			<img class="is-rounded" alt="link to github" src={githubLogo}>
-		</figure>
-	</a>
 	<button
 		class="button is-info is-medium is-pulled-right"
 		on:click={() => (showLockAddModal = true)}>Add</button
