@@ -16,6 +16,8 @@ Todo:
   ✔ Hide + Reveal codes @done(24-02-10 23:15)
   ☐ Deploy to the web
   ☐ Lock creation happens via a modal
+  Bug:
+    ☐ Can save to database without generating a code
   Nice to have:
     ☐ Add delete operation
     ☐ Add ability to edit existing locks
