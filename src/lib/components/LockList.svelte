@@ -10,11 +10,12 @@
 </script>
 
 <div >
-    <h2>Lock list</h2>
+    <h2 class="title is-2">Lock list</h2>
     {#if $locks}
         {#each $locks as lock (lock.id)}
             <div 
                 animate:flip={{duration: 500}}
+                class="mb-2"
             >
                 <LockItem lock={lock} />
             </div>

@@ -4,12 +4,12 @@
 </script>
 
 {#each code as digit}
-	<span class="black-border" style="margin-right:5px">{reveal ? digit : "*"}</span>
+	<span class="border" style="margin-right:5px">{reveal ? digit : "*"}</span>
 {/each}
 
 <style>
-	.black-border {
-		border: 2px solid black;
+	.border {
+		border: 2px solid grey;
 		padding: 10px;
 	}
 </style>

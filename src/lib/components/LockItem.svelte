@@ -2,32 +2,30 @@
 	import type { Lock } from '$lib/data/db';
 	import Code from './Code.svelte';
 	export let lock: Lock;
-    let reveal = false;
+	let reveal = false;
 </script>
 
-<div class="container black-border">
-	<p>
-		Code:
-		<Code code={lock.lock} reveal={reveal} />
-        <label>
-            <input type="checkbox" bind:checked={reveal} />
-            Reveal
-        </label>
-	</p>
-	<p>Created at: {lock.createdAt}</p>
-	<p>Note:</p>
-	<textarea class="textarea" readonly disabled>{lock.note || ''}</textarea>
+<div class="box">
+	<div class="block">
+		<p>
+			Code:
+			<Code code={lock.lock} {reveal} />
+			<label>
+				<input type="checkbox" bind:checked={reveal} />
+				Reveal
+			</label>
+		</p>
+	</div>
+	<div class="block">
+		<p>Created at: {lock.createdAt}</p>
+	</div>
+	<div class="block">
+		<p>Note:</p>
+		<textarea class="textarea" readonly disabled>{lock.note || ''}</textarea>
+	</div>
 </div>
 
 <style>
-	.black-border {
-		border: 2px solid black;
-		padding: 10px;
-	}
-	.container {
-		padding: 10px;
-		margin: 10px;
-	}
 	.textarea {
 		height: 5rem;
 		width: 50%;
