@@ -9,9 +9,12 @@ Todo:
   ✔ Separate into components: @done(24-02-10 18:46)
     ✔ LockAdd @done(24-02-10 18:29)
     ✔ LockList @done(24-02-10 19:36)
-  ☐ Add a nice transition for when items are added to lock list
+  ✔ Add a nice transition for when items are added to lock list @done(24-02-10 20:38)
   ✔ Clear form on successful save @done(24-02-10 19:37)
+  ✔ Create lock item component @started(24-02-10 20:40) @done(24-02-10 20:46) @lasted(6m34s)
+  ☐ Deploy to the web
   ☐ Clean up created date/time format
+  ☐ Clear existing status when someone tries to generate another lock
   ☐ Hide + Reveal codes
   ☐ Dry up CSS
   ☐ Lock creation happens via a modal
