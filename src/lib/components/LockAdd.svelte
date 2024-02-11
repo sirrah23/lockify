@@ -48,7 +48,7 @@
             ...
         {/if}
     </p>
-	<p>Notes:</p>
+	<p>Note:</p>
 	<textarea class="textarea" bind:value={note}></textarea>
 </div>
 
