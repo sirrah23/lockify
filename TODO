@@ -21,7 +21,7 @@ Todo:
   Bug:
     ✔ Can save to database without generating a code @done(24-02-11 15:07)
   Nice to have:
-    ☐ Add delete operation
+    ✔ Add delete operation @done(24-02-11 16:41)
     ☐ Add ability to edit existing locks
     ☐ Clicking off modal should close modal
     ☐ Info blurb about the app

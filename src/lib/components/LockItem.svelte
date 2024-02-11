@@ -1,11 +1,22 @@
 <script lang="ts">
 	import type { Lock } from '$lib/data/db';
+	import { db } from '$lib/data/db';
 	import Code from './Code.svelte';
 	export let lock: Lock;
 	let reveal = false;
+
+	function deleteItem(id: number) {
+		db.locks.delete(id);
+	}
 </script>
 
 <div class="box">
+	<div class="block">
+		<button
+			class="button is-danger is-pulled-right is-small is-rounded"
+			on:click={() => lock.id && deleteItem(lock.id)}>x</button
+		>
+	</div>
 	<div class="block">
 		<p class="is-size-5">Date and time: {lock.createdAt.toLocaleString('en-US')}</p>
 	</div>
