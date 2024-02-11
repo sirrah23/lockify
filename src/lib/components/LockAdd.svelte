@@ -22,9 +22,12 @@
 				createdAt: new Date()
 			});
 			status = {message: `Persisted lock with id ${id}`, isError: false}
+            // Reset the form
+            lockerCode = [];
+            note = "";
 		} catch (error) {
 			status = {message: `Failed to persist lock: ${error}`, isError: true}
-		}
+		} 
 	}
 </script>
 
