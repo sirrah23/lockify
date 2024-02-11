@@ -16,7 +16,11 @@ Todo:
   ✔ Hide + Reveal codes @done(24-02-10 23:15)
   ☐ Deploy to the web
   ☐ Lock creation happens via a modal
+  Nice to have:
+    ☐ Add delete operation
+    ☐ Add ability to edit existing locks
   Nits:
     ☐ Clear existing status when someone tries to generate another lock
     ☐ Clean up created date/time format and make it the card title
     ☐ Highlight active card in some way
+    ☐ Ensure consistent terminology across code
