@@ -51,7 +51,7 @@
 		<section class="modal-card-body">
 			<div class="block">
 				Generated code
-				<button class="button is-small" on:click={() => generateCode()}>↺</button>
+				<button class="button is-small is-rounded" on:click={() => generateCode()}>↺</button>
 			</div>
 			<div class="block">
 				{#if lockerCode}
