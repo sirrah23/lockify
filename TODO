@@ -16,12 +16,16 @@ Todo:
   ✔ Hide + Reveal codes @done(24-02-10 23:15)
   ✔ Lock creation happens via a modal @done(24-02-11 00:12)
   ✔ Reveal is a button not a checkbox @done(24-02-11 00:23)
-  ☐ Deploy to the web
+  ✔ Deploy to the web @done(24-02-11 15:06)
+  ☐ Update README.md
   Bug:
-    ☐ Can save to database without generating a code
+    ✔ Can save to database without generating a code @done(24-02-11 15:07)
   Nice to have:
     ☐ Add delete operation
     ☐ Add ability to edit existing locks
+    ☐ Clicking off modal should close modal
+    ☐ Info blurb about the app
+    ☐ CSV export
   Nits:
     ☐ Clear existing status when someone tries to generate another lock
     ☐ Clean up created date/time format and make it the card title
