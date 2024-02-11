@@ -1,17 +1,10 @@
 <script lang="ts">
-    interface Lock {
-        id: number;
-        code: number[];
-        note: string
-        createdAt: Date;
-    }
+    import { liveQuery } from "dexie";
+    import { db } from "$lib/data/db";
 
-    let locks: Lock[] = [
-        {id: 1, code: [4, 3, 2, 1], note: "Locker 13", createdAt: new Date()},
-        {id: 1, code: [1, 5,5, 2], note: "Locker 13", createdAt: new Date()},
-        {id: 1, code: [9, 1, 2, 3], note: "Locker 15", createdAt: new Date()},
-    ];
-
+    let locks = liveQuery(
+        () => db.locks.orderBy('createdAt').reverse().toArray()
+    );
 </script>
 
 <style>
@@ -31,13 +24,15 @@
 
 <div >
     <h2>Lock list</h2>
-    {#each locks as lock}
-        <!-- Consider a lock component here with code hiding -->
-        <div class="container black-border">
-            <p>Code: {lock.code}</p>
-            <p>Created at: {lock.createdAt}</p>
-            <p>Note:</p>
-            <textarea class="textarea">{lock.note}</textarea>
-        </div>
-    {/each}
+    {#if $locks}
+        {#each $locks as lock (lock.id)}
+            <!-- Consider a lock component here with code hiding -->
+            <div class="container black-border">
+                <p>Code: {lock.lock}</p>
+                <p>Created at: {lock.createdAt}</p>
+                <p>Note:</p>
+                <textarea class="textarea" readonly disabled>{lock.note || ""}</textarea>
+            </div>
+        {/each}
+    {/if}
 </div>
