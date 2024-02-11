@@ -26,6 +26,7 @@ Todo:
     ☐ Clicking off modal should close modal
     ☐ Info blurb about the app
     ☐ CSV export
+    ☐ Dark mode
   Nits:
     ☐ Clear existing status when someone tries to generate another lock
     ☐ Clean up created date/time format and make it the card title

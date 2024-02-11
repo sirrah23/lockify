@@ -22,7 +22,7 @@
 	</div>
 	<div class="block">
 		<Code code={lock.lock} {reveal} />
-		<button class="button is-small" on:click={() => (reveal = !reveal)}>👁</button>
+		<button class="button is-small is-rounded" on:click={() => (reveal = !reveal)}>👁</button>
 	</div>
 	<div class="block">
 		<p>Note:</p>
