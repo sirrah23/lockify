@@ -13,7 +13,10 @@
 	</div>
 </section>
 <div class="section">
-	<button class="button is-info is-medium is-pulled-right" on:click={() => showLockAddModal = true}>Add</button>
+	<button
+		class="button is-info is-medium is-pulled-right"
+		on:click={() => (showLockAddModal = true)}>Add</button
+	>
 </div>
 <div class="section">
 	<LockList />

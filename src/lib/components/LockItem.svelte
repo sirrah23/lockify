@@ -7,11 +7,11 @@
 
 <div class="box">
 	<div class="block">
-		<p class="is-size-5">Date and time: {lock.createdAt.toLocaleString("en-US")}</p>
+		<p class="is-size-5">Date and time: {lock.createdAt.toLocaleString('en-US')}</p>
 	</div>
 	<div class="block">
 		<Code code={lock.lock} {reveal} />
-		<button class="button is-small" on:click={() => reveal = !reveal}>👁</button>
+		<button class="button is-small" on:click={() => (reveal = !reveal)}>👁</button>
 	</div>
 	<div class="block">
 		<p>Note:</p>
