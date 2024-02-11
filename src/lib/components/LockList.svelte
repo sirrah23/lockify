@@ -1,6 +1,7 @@
 <script lang="ts">
     import { liveQuery } from "dexie";
     import { db } from "$lib/data/db";
+	import { flip } from "svelte/animate";
 
     let locks = liveQuery(
         () => db.locks.orderBy('createdAt').reverse().toArray()
@@ -27,12 +28,17 @@
     {#if $locks}
         {#each $locks as lock (lock.id)}
             <!-- Consider a lock component here with code hiding -->
-            <div class="container black-border">
+            <div 
+                class="container black-border"
+                animate:flip={{duration: 500}}
+            >
                 <p>Code: {lock.lock}</p>
                 <p>Created at: {lock.createdAt}</p>
                 <p>Note:</p>
                 <textarea class="textarea" readonly disabled>{lock.note || ""}</textarea>
             </div>
         {/each}
+    {:else}
+            <p>...</p>
     {/if}
 </div>
