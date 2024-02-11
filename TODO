@@ -24,7 +24,7 @@ Todo:
     ✔ Add delete operation @done(24-02-11 16:41)
     ☐ Add ability to edit existing locks
     ☐ Clicking off modal should close modal
-    ☐ Info blurb about the app
+    ✔ Info blurb about the app @done(24-02-11 17:13)
     ☐ CSV export
     ☐ Dark mode
   Nits:
