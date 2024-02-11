@@ -17,7 +17,7 @@ Todo:
   ✔ Lock creation happens via a modal @done(24-02-11 00:12)
   ✔ Reveal is a button not a checkbox @done(24-02-11 00:23)
   ✔ Deploy to the web @done(24-02-11 15:06)
-  ☐ Update README.md
+  ✔ Update README.md @done(24-02-11 15:53)
   Bug:
     ✔ Can save to database without generating a code @done(24-02-11 15:07)
   Nice to have:
