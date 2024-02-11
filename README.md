@@ -50,3 +50,7 @@ bun run build
 ```
 
 You can preview the production build with `bun run preview`.
+
+## Adam's Code Jam
+
+This code was created in early 2024 for [Adam's Code Jam](https://jam.adamlearns.com/).
