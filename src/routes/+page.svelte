@@ -7,19 +7,19 @@
 	let showLockAddModal = false;
 </script>
 
-<nav class="navbar">
-	<div class="navbar-end">
-		<div class="navbar-item">
-			<div class="buttons">
-				<a href="https://github.com/sirrah23/lockify">
-					<figure class="image is-24x24">
-						<img class="is-rounded" alt="link to project on github" src={githubLogo} />
-					</figure>
-				</a>
-			</div>
+<div class="p-4 is-flex is-justify-content-center is-align-items-center">
+	<div class="is-flex-grow-1"></div>
+	<!-- This empty div will push the content to the right -->
+	<div>
+		<div>
+			<a href="https://github.com/sirrah23/lockify">
+				<figure class="image is-24x24">
+					<img class="is-rounded" alt="link to project on github" src={githubLogo} />
+				</figure>
+			</a>
 		</div>
 	</div>
-</nav>
+</div>
 
 <section class="hero is-info is-small">
 	<div class="hero-body">
