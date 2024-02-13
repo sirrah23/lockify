@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Lock } from '$lib/data/db';
 	import { db } from '$lib/data/db';
+	import { toast } from '$lib/toasts';
 	import Code from './Code.svelte';
 	export let lock: Lock;
 	let reveal = false;
@@ -14,7 +15,12 @@
 	<div class="block">
 		<button
 			class="button is-danger is-pulled-right is-small is-rounded"
-			on:click={() => lock.id && deleteItem(lock.id)}>x</button
+			on:click={() => {
+				if (lock.id) {
+					deleteItem(lock.id);
+					toast('Lock deleted');
+				}
+			}}>x</button
 		>
 	</div>
 	<div class="block">

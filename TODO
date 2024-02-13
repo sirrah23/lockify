@@ -22,7 +22,7 @@ Todo:
     ✔ Can save to database without generating a code @done(24-02-11 15:07)
   Nice to have:
     ✔ Add delete operation @done(24-02-11 16:41)
-    ☐ Add toasts for successful and unsuccessful operations
+    ✔ Add toasts for successful and unsuccessful operations @done(24-02-13 05:12)
       Could potentially use this library: https://github.com/apvarun/toastify-js
     ☐ Add ability to edit existing locks
     ☐ Clicking off modal should close modal

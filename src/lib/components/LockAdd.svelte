@@ -2,12 +2,12 @@
 	import { db } from '$lib/data/db';
 	import { onMount } from 'svelte';
 	import Code from './Code.svelte';
+	import { toast } from '$lib/toasts';
 
 	export let onDone: () => void = () => {};
 
 	let lockerCode: number[];
 	let note: string;
-	let status: { message: string; isError: boolean };
 
 	function generateCode() {
 		let newDigits: number[] = [];
@@ -32,6 +32,7 @@
 		} catch (error) {
 			console.dir({ message: `Failed to persist lock: ${error}`, isError: true });
 		} finally {
+			toast('Lock successfully added');
 			onDone();
 		}
 	}

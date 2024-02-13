@@ -31,7 +31,9 @@
   },
   "type": "module",
   "dependencies": {
+    "@types/toastify-js": "^1.12.3",
     "bulma": "^0.9.4",
-    "dexie": "next"
+    "dexie": "next",
+    "toastify-js": "^1.12.0"
   }
 }
