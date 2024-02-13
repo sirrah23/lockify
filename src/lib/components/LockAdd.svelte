@@ -32,7 +32,7 @@
 		} catch (error) {
 			console.dir({ message: `Failed to persist lock: ${error}`, isError: true });
 		} finally {
-			toast('Lock successfully added');
+			toast('Added a new locker code');
 			onDone();
 		}
 	}

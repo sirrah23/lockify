@@ -18,7 +18,7 @@
 			on:click={() => {
 				if (lock.id) {
 					deleteItem(lock.id);
-					toast('Lock deleted');
+					toast('Deleted a locker code');
 				}
 			}}>x</button
 		>
